@@ -1,10 +1,9 @@
-
 /* General Styles */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #ff6f61, #ffb88c); /* Coral to Peach */
-    color: #333; /* Dark Gray */
+    background: linear-gradient(135deg, #ffffff, #ffe6f0); /* White to Blush Pink */
+    color: #800A49; /* Romantic Deep Purple */
     transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -12,11 +11,12 @@ body {
 .glow-header {
     text-align: center;
     padding: 20px;
-    color: #fff; /* Pure White */
+    color: #800A49; /* Deep Purple for Text */
     font-size: 28px;
     font-weight: bold;
-    text-shadow: 0 0 15px #ff9f94, 0 0 30px #ff6f61; /* Warm Glow */
-    background: linear-gradient(90deg, #ff6f61, #ff9f94); /* Coral to Light Pink */
+    text-shadow: 0 0 15px #ffb3c6, 0 0 30px #800A49; /* Glow with Pink */
+    background: linear-gradient(90deg, #ffffff, #ffb3c6); /* White to Light Pink */
+    border-bottom: 3px solid #800A49; /* Romantic touch */
 }
 
 /* Slideshow Section */
@@ -30,7 +30,7 @@ body {
     display: inline-block;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .slider img {
@@ -43,13 +43,13 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.8); /* Light Transparent Button */
+    background-color: #800A49; /* Deep Purple */
     border: none;
     padding: 10px;
     cursor: pointer;
     font-size: 18px;
     border-radius: 50%;
-    color: #ff6f61; /* Coral */
+    color: #ffffff; /* White Text */
 }
 
 #prev {
@@ -68,8 +68,8 @@ body {
 
 .love-notes h2 {
     font-size: 24px;
-    color: #fff; /* White for better contrast */
-    text-shadow: 0 0 10px #ff9f94;
+    color: #800A49; /* Romantic Purple */
+    text-shadow: 0 0 10px #ffb3c6;
 }
 
 .notes-container {
@@ -85,18 +85,18 @@ body {
     font-size: 32px;
     cursor: pointer;
     transition: transform 0.3s ease, color 0.3s ease;
-    color: #ff9f94; /* Light Coral */
+    color: #ffb3c6; /* Soft Pink */
 }
 
 .heart:active {
     transform: scale(1.3);
-    color: #ff6f61; /* Deep Coral */
+    color: #800A49; /* Deep Purple on Click */
 }
 
 .note-display {
     margin-top: 20px;
     font-size: 18px;
-    color: #fff; /* White for strong contrast */
+    color: #800A49; /* Romantic Deep Purple */
     opacity: 0;
     transition: opacity 0.5s ease;
 }
@@ -120,8 +120,8 @@ body.dark-mode {
 /* Footer */
 .footer {
     text-align: center;
-    background-color: #ff6f61; /* Coral */
-    color: #fff; /* White */
+    background-color: #800A49; /* Romantic Purple */
+    color: #ffffff; /* White */
     padding: 10px;
     font-size: 16px;
 }
