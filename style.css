@@ -1,0 +1,114 @@
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffcce7, #ffd9f0);
+    color: #333;
+}
+
+/* Glowing Header */
+.glow-header {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ff7eb9, 0 0 20px #ff7eb9;
+    background: linear-gradient(90deg, #ff6492, #ff94a8);
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ff7eb9, 0 0 20px #ff6492;
+    }
+    to {
+        text-shadow: 0 0 15px #ff94a8, 0 0 30px #ff7eb9;
+    }
+}
+
+/* Slideshow Section */
+.slideshow {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.slider {
+    position: relative;
+    display: inline-block;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.slider img {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+/* Love Notes Section */
+.love-notes {
+    text-align: center;
+    padding: 20px;
+}
+
+.love-notes h2 {
+    font-size: 24px;
+    color: #ff6492;
+}
+
+.notes-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.heart {
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.heart:hover {
+    transform: scale(1.2);
+}
+
+.note-display {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ff6492;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    background-color: #ff6492;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+}
