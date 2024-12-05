@@ -1,33 +1,20 @@
-let currentSlide = 0;
+const images = ["image1.jpg", "image2.jpg", "image3.jpg"];
+let currentIndex = 0;
 
-// Function to change the slide
-function changeSlide(index) {
-  const carousel = document.getElementById('carousel');
-  const dots = document.querySelectorAll('button');
-  const totalSlides = carousel.children.length;
+const slideshow = document.getElementById('slideshow');
+const prev = document.getElementById('prev');
+const next = document.getElementById('next');
 
-  // Ensure the index is within bounds
-  currentSlide = (index + totalSlides) % totalSlides;
-
-  // Move the carousel to the new slide
-  const offset = -currentSlide * 100;
-  carousel.style.transform = `translateX(${offset}%)`;
-
-  // Update the active dot
-  dots.forEach(dot => dot.classList.replace('bg-pink-500', 'bg-pink-200'));
-  dots[currentSlide].classList.replace('bg-pink-200', 'bg-pink-500');
+function showImage(index) {
+    slideshow.src = images[index];
 }
 
-// Function to create floating hearts
-function createFloatingHeart() {
-  const heart = document.createElement('div');
-  heart.classList.add('floating-heart');
-  heart.style.left = Math.random() * 100 + 'vw';
-  heart.style.animationDuration = Math.random() * 3 + 2 + 's';
-  document.body.appendChild(heart);
+prev.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+});
 
-  setTimeout(() => heart.remove(), 5000);
-}
-
-// Generate hearts every 300ms
-setInterval(createFloatingHeart, 300);
+next.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+});
