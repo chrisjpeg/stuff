@@ -1,9 +1,87 @@
-
+/* General Styles */
 body {
-  font-family: 'Arial', sans-serif;
+    background-color: #ffe4e6;
+    color: #4a4a4a;
+    font-family: Inter, sans-serif;
+    margin: 0;
+    padding: 0;
 }
-button:hover {
-  transform: scale(1.1);
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.5);
+
+header {
+    background-color: #ff6492;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Slideshow Styles */
+.slideshow {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.slideshow h2 {
+    color: #d10064;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.slider-container {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+}
+
+.slider-container img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #d10064;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+/* Notes Section */
+.notes {
+    text-align: center;
+    padding: 20px;
+}
+
+.notes h2 {
+    color: #d10064;
+    margin-bottom: 10px;
+}
+
+.notes p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background-color: #ff6492;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
 }
