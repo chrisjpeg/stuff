@@ -33,6 +33,10 @@ function revealMessage(message) {
     noteDisplay.textContent = message;
     noteDisplay.classList.add("active");
     setTimeout(() => noteDisplay.classList.remove("active"), 2000); // Reset after fade-out
+
+    // Play sound effect
+    const audio = new Audio("click-sound.mp3"); // Add your sound file
+    audio.play();
 }
 
 // Function to toggle dark mode
