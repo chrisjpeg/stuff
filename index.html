@@ -1,42 +1,41 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cute Website for My Love</title>
+    <title>For My Love</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <h1>For My Love ❤️</h1>
+    <!-- Glowing Header -->
+    <header class="glow-header">
+        <h1>You Are My Sunshine ❤️</h1>
     </header>
-    
-    <!-- Main Content -->
-    <main>
-        <!-- Slideshow Section -->
-        <section class="slideshow">
-            <h2>Our Moments</h2>
-            <div class="slider-container">
-                <img id="slideshow" src="img1.jpg" alt="Our Pictures">
-                <button id="prev" class="slider-btn">❮</button>
-                <button id="next" class="slider-btn">❯</button>
-            </div>
-        </section>
 
-        <!-- Sweet Notes Section -->
-        <section class="notes">
-            <h2>Why You're Amazing</h2>
-            <p>
-                You light up my world with your smile. Each day with you is a treasure, and I am so lucky to have you in my life.
-                Always remember how much I love you!
-            </p>
-        </section>
-    </main>
+    <!-- Slideshow Section -->
+    <section class="slideshow">
+        <div class="slider">
+            <img id="slideshow" src="image1.jpg" alt="Our Picture">
+            <button id="prev" class="slider-btn">❮</button>
+            <button id="next" class="slider-btn">❯</button>
+        </div>
+    </section>
+
+    <!-- Love Notes Section -->
+    <section class="love-notes">
+        <h2>Click on the Hearts 💖</h2>
+        <div class="notes-container">
+            <button class="heart" onclick="revealMessage('You make every day brighter!')">💖</button>
+            <button class="heart" onclick="revealMessage('You are my everything!')">💖</button>
+            <button class="heart" onclick="revealMessage('I’m so lucky to have you!')">💖</button>
+        </div>
+        <p id="note-display" class="note-display"></p>
+    </section>
 
     <!-- Footer -->
-    <footer>
-        <p>Made with ❤️ for you</p>
+    <footer class="footer">
+        <p>Handcrafted with ❤️ just for you.</p>
     </footer>
 
     <script src="script.js"></script>
