@@ -46,9 +46,9 @@ function toggleDarkMode() {
 
 // Random Quote Display in Header
 const quotes = [
-    "You light up my world 🌟",
-    "I’m so lucky to have you ❤️",
-    "Every moment with you is magical ✨"
+    "you light up my world",
+    "im so lucky to have you",
+    "every hour with you is like a second"
 ];
 
 window.addEventListener("load", () => {
