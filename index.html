@@ -1,38 +1,72 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>hello london ❤️</title>
+  <title>For My Love ❤️</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    .heart {
-      position: fixed;
-      width: 20px;
-      height: 20px;
-      background-color: red;
-      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-      animation: fall 5s linear infinite;
+    /* Background gradient and floating hearts */
+    body {
+      background: linear-gradient(180deg, #ffe4e6, #ffeef0);
+      overflow: hidden;
     }
-    @keyframes fall {
-      0% { transform: translateY(-100px) translateX(0); opacity: 1; }
-      100% { transform: translateY(100vh) translateX(30px); opacity: 0; }
+
+    .floating-heart {
+      position: fixed;
+      width: 15px;
+      height: 15px;
+      background: radial-gradient(circle, #ff9a9e, #fad0c4);
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+      animation: floatUp 5s linear infinite;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) scale(0.8);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-50px) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    /* Buttons hover effects */
+    button:hover {
+      transform: scale(1.1);
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 4px 10px rgba(255, 105, 180, 0.5);
     }
   </style>
 </head>
 <body class="bg-pink-50 text-gray-700 flex flex-col items-center p-4">
+  <!-- Floating Hearts -->
+  <script>
+    setInterval(() => {
+      const heart = document.createElement('div');
+      heart.classList.add('floating-heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 5000);
+    }, 300);
+  </script>
+
+  <!-- Header -->
   <header class="text-center py-6">
-    <h1 class="text-4xl font-bold text-pink-600">hello london</h1>
-    <p class="text-lg mt-2">a little skibidi just for you</p>
+    <h1 class="text-4xl font-bold text-pink-600">For My Love ❤️</h1>
+    <p class="text-lg mt-2">A little something, just for you!</p>
   </header>
 
+  <!-- Picture Carousel -->
   <section id="carousel-section" class="w-full max-w-lg mt-6">
     <div class="relative overflow-hidden rounded-lg shadow-lg">
       <div id="carousel" class="flex transition-transform duration-500">
-        <img src="https://cdn.discordapp.com/attachments/1309389856207798383/1314028934320357426/464677709_1317644069394679_6031966618691275226_n.jpg?ex=6752484f&is=6750f6cf&hm=501db091a2cd0455a64249cc018419224351a270a3c0ab28b4c3bcbb11c8f741&" alt="Romantic" class="w-full">
-        <img src="https://cdn.discordapp.com/attachments/1309389856207798383/1314028934677135482/462637165_1944408309380818_2443263774474928616_n.jpg?ex=6752484f&is=6750f6cf&hm=c7d820bd1195b36bdf2aae176b6a4e07252b7b0d7bb7e7799504c5ae819c2b12&" alt="Couple" class="w-full">
-        <img src="https://cdn.discordapp.com/attachments/1309389856207798383/1314028934941114440/462646935_1315552236470384_2169925183445709452_n.jpg?ex=6752484f&is=6750f6cf&hm=20d7b2d478c76c5f70e39a85228059d8985ac44fade3592ea7221c7099e5bd2a&" alt="Love" class="w-full">
+        <img src="https://source.unsplash.com/800x600/?romantic" alt="Romantic" class="w-full">
+        <img src="https://source.unsplash.com/800x600/?couple" alt="Couple" class="w-full">
+        <img src="https://source.unsplash.com/800x600/?love" alt="Love" class="w-full">
       </div>
     </div>
     <div class="flex justify-center mt-2 space-x-2">
@@ -42,8 +76,87 @@
     </div>
   </section>
 
+  <!-- About Her Section -->
+  <section id="about-section" class="mt-10 max-w-2xl text-center">
+    <h2 class="text-2xl font-semibold text-pink-600">Why You're So Special</h2>
+    <p class="mt-4">
+      You're the most amazing person I've ever met. Your smile lights up my days, your laugh brings me joy, and your love is my greatest treasure. This is a small token to show how much you mean to me. ❤️
+    </p>
+  </section>
+
+  <!-- Random Love Notes -->
+  <section id="love-notes" class="mt-10">
+    <h3 class="text-xl font-medium text-pink-600">Love Notes</h3>
+    <button 
+      onclick="showLoveNote()" 
+      class="bg-pink-500 text-white px-4 py-2 rounded-lg shadow-md mt-4">
+      Show Me a Note!
+    </button>
+    <p id="love-note" class="mt-4 text-lg text-pink-600"></p>
+  </section>
+
+  <!-- Spotify Embed -->
+  <section id="song-section" class="mt-10">
+    <h3 class="text-xl font-medium text-pink-600">A Song Just for You</h3>
+    <div class="mt-4">
+      <iframe 
+        src="https://open.spotify.com/embed/track/4gT3mNJA8lnlkYFqGZ8IA2?utm_source=generator" 
+        width="300" 
+        height="80" 
+        frameborder="0" 
+        allowfullscreen="" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- I Love You Button -->
+  <section class="mt-10">
+    <button 
+      onclick="playAudio()" 
+      class="bg-red-500 text-white px-8 py-4 rounded-full shadow-lg text-lg animate-pulse">
+      I Love You ❤️
+    </button>
+    <audio id="love-audio" src="https://www.soundjay.com/button/beep-07.mp3"></audio>
+  </section>
+
+  <!-- Footer -->
   <footer class="mt-10 text-center text-sm text-gray-500">
     Made with 💕 for you.
   </footer>
+
+  <!-- Scripts -->
+  <script>
+    let currentSlide = 0;
+
+    function changeSlide(index) {
+      const carousel = document.getElementById('carousel');
+      const dots = document.querySelectorAll('button');
+      const totalSlides = carousel.children.length;
+
+      currentSlide = (index + totalSlides) % totalSlides;
+      const offset = -currentSlide * 100;
+      carousel.style.transform = `translateX(${offset}%)`;
+
+      dots.forEach(dot => dot.classList.replace('bg-pink-500', 'bg-pink-200'));
+      dots[currentSlide].classList.replace('bg-pink-200', 'bg-pink-500');
+    }
+
+    function showLoveNote() {
+      const loveNotes = [
+        "You're my sunshine on a cloudy day.",
+        "You make my heart skip a beat.",
+        "I can't stop thinking about you!",
+        "You are my everything.",
+        "I love you more than words can say."
+      ];
+      const randomIndex = Math.floor(Math.random() * loveNotes.length);
+      document.getElementById('love-note').innerText = loveNotes[randomIndex];
+    }
+
+    function playAudio() {
+      document.getElementById('love-audio').play();
+    }
+  </script>
 </body>
 </html>
