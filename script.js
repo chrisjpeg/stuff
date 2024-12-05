@@ -1,5 +1,5 @@
 
-const images = ["image1.jpg", "image2.jpg", "image3.jpg"];
+const images = ["img1.jpg", "img2.jpg", "img3.jpg"];
 let currentIndex = 0;
 
 const slideshow = document.getElementById("slideshow");
