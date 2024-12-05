@@ -33,10 +33,6 @@ function revealMessage(message) {
     noteDisplay.textContent = message;
     noteDisplay.classList.add("active");
     setTimeout(() => noteDisplay.classList.remove("active"), 2000); // Reset after fade-out
-
-    // Play sound effect
-    const audio = new Audio("click-sound.mp3"); // Add your sound file
-    audio.play();
 }
 
 // Function to toggle dark mode
@@ -46,9 +42,9 @@ function toggleDarkMode() {
 
 // Random Quote Display in Header
 const quotes = [
-    "you light up my world",
-    "im so lucky to have you",
-    "every hour with you is like a second"
+    "You light up my world 🌟",
+    "I’m so lucky to have you ❤️",
+    "Every moment with you is magical ✨"
 ];
 
 window.addEventListener("load", () => {
